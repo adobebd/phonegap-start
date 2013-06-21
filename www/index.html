@@ -49,6 +49,12 @@
         navigator.device.capture.captureImage(captureSuccess, captureError, {limit: 2});
     }
 
+    function captureAudio() {
+        // Launch device audio recording application, 
+        // allowing user to capture up to 2 audio clips
+        navigator.device.capture.captureAudio(captureSuccess, captureError, {limit: 2});
+    }
+
     // Upload files to server
     function uploadFile(mediaFile) {
         var ft = new FileTransfer(),
@@ -71,5 +77,6 @@
     </head>
     <body>
         <button onclick="captureImage();">Capture Image</button> <br>
+        <button onclick="captureAudio();">Capture Audio</button> <br>
     </body>    
 </html>
